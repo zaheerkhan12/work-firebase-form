@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+   <div class="sign-up">
+      <h1>Sign-up</h1>
+     <form action="" onsubmit="signup(event)">
+      <label for="">Email</label>
+      <input type="text" name="" id="email" placeholder="Enter your Email">
+      <label for="">Password</label>
+      <input type="password" name="" id="password" placeholder="Enter Your Password">
+      <button type="submit">Submit</button>
+      <!-- <button onclick="google()"> Login with google </button> -->
+     </form>
+  </div>
+  <div class="Login">
+      <h1>Login</h1>
+      <form action="" onsubmit="Login(event)">
+         <label for="">Email</label>
+       <input type="text" name="" id="Login_email" placeholder="Enter Your Email">
+       <label for="">Password</label>
+       <input type="password" name="" id="Login_password" placeholder="Enter Your Password">
+       <button type="submit">login</button>
+       <button onclick="logout()">LogOut</button>
+      </form>
+   </div>
+  <div class="wellcome-box">
+      <h1>
+          wellcome-box 
+      </h1>
+  </div>
+
+
+
+  <div class="center">
+      <h2>your account detail</h2>
+      <img src="./IMG-20240724-WA0011.jpg" 
+      height="auto" id="propic" width="50%"  alt="no-img">
+       <input type="file" accept="image/*" onchange="uploadimg(event)">
+       
+      <div class="userdetails">
+
+      </div>
+
+  </div>
+
+  <div id="model">
+      <h1>Registration Form</h1>
+      <form action="" id="editsprofile" onsubmit="userupdate(event)">
+       <input type="text" name="name" placeholder="name " >
+       <input type="email" name="profileEmail" placeholder="email">
+       <input type="number" name="phone"  placeholder="phone ">
+       <input type="text" name="specialty" placeholder="specialty" id="">
+       <input type="text" name="portfolioUrl"  placeholder="portfolioUrl">
+       <input type="text" name="experience"  placeholder="experience">
+
+       <button >Submit</button>
+       
+      </form>
+   </div>
+
+
+   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+<SCRipt>
+    const firebaseConfig = {
+           apiKey: "AIzaSyAwejk4eISvgttQpezy8jr-OHBwByiDM_w",
+           authDomain: "user-49ab0.firebaseapp.com",
+           projectId: "user-49ab0",
+           storageBucket: "user-49ab0.appspot.com",
+           messagingSenderId: "664922118029",
+           appId: "1:664922118029:web:64a73d9c64645fce7b8fc4",
+           measurementId: "G-LPLXKR2649"
+       };
+
+ firebase.initializeApp(firebaseConfig);
+</SCRipt>
+    <script src="script.js"></script>
+    <script src="./script/storage.js"></script>
+</body>
+</html>
